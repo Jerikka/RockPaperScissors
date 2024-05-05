@@ -19,8 +19,34 @@ function playGame(e) {
     }
     console.log(playerSelection,"The computer chose:",computerSelection);
     let result = checkWinner(playerSelection, computerSelection);
+    console.log(result);
 }
 
-function checkWinner(){
+function checkWinner(playerSelection, computerSelection){
+    if(playerSelection === computerSelection){
+        return "Draw"
+    }
+    if (playerSelection === "Rock"){
+        if (computerSelection === "Paper") {
+            return "Computer Wins"
+        }
+    } else {
+        return "Player Wins"
+    }
 
+    if (playerSelection === "Paper"){
+        if (computerSelection === "Scissors") {
+            return "Computer Wins"
+        }
+    } else {
+        return "Player Wins"
+    }
+
+    if (playerSelection === "Scissors"){
+        if (computerSelection === "Rock") {
+            return "Computer Wins"
+        }
+    } else {
+        return "Player Wins"
+    }
 }
