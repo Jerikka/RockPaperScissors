@@ -20,6 +20,11 @@ function playGame(e) {
     console.log(playerSelection,"The computer chose:",computerSelection);
     let result = checkWinner(playerSelection, computerSelection);
     console.log(result);
+
+    if(result == "Player"){
+        result += "wins!";
+        winner[1]++;
+    }
 }
 
 function checkWinner(playerSelection, computerSelection){
